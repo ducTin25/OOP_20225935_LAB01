@@ -1,12 +1,8 @@
-// 2.2.6: Write a program to solve linear equation, linear system and second-degree equation.
-// EquationSolver.java
-
 import java.util.Scanner;
 import java.lang.Math;
 
 public class EquationSolver {
 	public static void main(String[] args) {
-		// Initialize Scanner object
 		Scanner sc = new Scanner(System.in);
 
 		// GIAI PHUONG TRINH TUYEN TINH BAC NHAT
@@ -15,13 +11,13 @@ public class EquationSolver {
 
 		// Nhap a, b tu ban phim
 		System.out.print("Input a = ");
-		Double a_khanhnq = sc.nextDouble();
+		Double a = sc.nextDouble();
 
 		System.out.print("Input b = ");
 		Double b = sc.nextDouble();
 
-		if (a_khanhnq != 0.0) {
-			Double result = -b / a_khanhnq;
+		if (a != 0.0) {
+			Double result = -b / a;
 			System.out.println("x = " + result);
 		} else {
 			if (b == 0.0) {
@@ -78,23 +74,23 @@ public class EquationSolver {
 		System.out.print("Input a = ");
 		Double a = sc.nextDouble();
 		System.out.print("Input b = ");
-		Double b_khanhnq = sc.nextDouble();
+		Double b = sc.nextDouble();
 		System.out.print("Input c = ");
 		Double c = sc.nextDouble();
 
 		// Tinh delta
-		Double delta = b_khanhnq * b_khanhnq - 4 * a * c;
+		Double delta = b * b - 4 * a * c;
 
 		if (delta < 0) {
 
 			System.out.println("Phuong trinh vo nghiem.");
 		} else if (delta == 0.0) {
-			Double result = - b_khanhnq / (2 * a);
+			Double result = - b / (2 * a);
 
 			System.out.println("Phuong trinh co nghiem kep x1 = x2 = " + result);
 		} else {
-			Double qx1 = (- b_khanhnq - Math.sqrt(delta)) / (2 * a);
-			Double qx2 = (- b_khanhnq + Math.sqrt(delta)) / (2 * a);
+			Double qx1 = (- b - Math.sqrt(delta)) / (2 * a);
+			Double qx2 = (- b + Math.sqrt(delta)) / (2 * a);
 
 			System.out.println("Phuong trinh co 2 nghiem phan biet:");
 			System.out.println("x1 = " + qx1);

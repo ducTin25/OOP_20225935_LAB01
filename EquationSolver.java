@@ -72,25 +72,25 @@ public class EquationSolver {
 
 		// Nhap a, b, c tu ban phim
 		System.out.print("Input a = ");
-		Double a = sc.nextDouble();
+		Double A = sc.nextDouble();
 		System.out.print("Input b = ");
-		Double b = sc.nextDouble();
+		Double e = sc.nextDouble();
 		System.out.print("Input c = ");
-		Double c = sc.nextDouble();
+		Double f = sc.nextDouble();
 
 		// Tinh delta
-		Double delta = b * b - 4 * a * c;
+		Double delta = e * e - 4 * d * f;
 
 		if (delta < 0) {
 
 			System.out.println("Phuong trinh vo nghiem.");
 		} else if (delta == 0.0) {
-			Double result = - b / (2 * a);
+			Double result = - e / (2 * A);
 
 			System.out.println("Phuong trinh co nghiem kep x1 = x2 = " + result);
 		} else {
-			Double qx1 = (- b - Math.sqrt(delta)) / (2 * a);
-			Double qx2 = (- b + Math.sqrt(delta)) / (2 * a);
+			Double qx1 = (- e - Math.sqrt(delta)) / (2 * A);
+			Double qx2 = (- e + Math.sqrt(delta)) / (2 * A);
 
 			System.out.println("Phuong trinh co 2 nghiem phan biet:");
 			System.out.println("x1 = " + qx1);
